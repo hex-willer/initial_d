@@ -38,4 +38,10 @@ sudo make dkms_install
 echo 'Setting Alias'
 echo "alias gc='git clone'" >> ~/.bashrc
 echo "alias sc='semgrep --config'" >> ~/.bahsrc
+echo "alias rules='cd /home/hexwiller/semgrep/mastg-main/mastg'" >> ~/.bashrc
+echo "alias m1='cd /home/hexwiller/semgrep/mastg-main/mastg1'" >> ~/.bashrc
+echo "alias m2='cd /home/hexwiller/semgrep/mastg-main/mastg2'" >> ~/.bashrc 
+echo "alias ..='cd ../..'" >> ~/.bashrc
+echo "alias .='cd ../'" >> ~/.bashrc
+
 
