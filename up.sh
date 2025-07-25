@@ -24,6 +24,7 @@ echo '. "$HOME/.cargo/env"' >> ~/.bashrc
 pip install 'urllib3<2' 'chardet<5' --upgrade
 
 python3 -m pip install semgrep==1.100.0
+pipx install --spec semgrep==1.100.0 semgrep
 
 echo '* 0.0.0.0/0 ::/0' >> /etc/vbox/network.conf
 
