@@ -45,4 +45,9 @@ echo "alias m1='cd /home/hexwiller/semgrep/mastg-main/mastg1'" >> ~/.bashrc
 echo "alias m2='cd /home/hexwiller/semgrep/mastg-main/mastg2'" >> ~/.bashrc 
 echo "alias ..='cd ../..'" >> ~/.bashrc
 
+#this is vboxsf and vbox kvm diasbling with modprob
+echo "vboxsf:x:999:" >> /etc/group 
+echo 'this is for disabling kvm mode in virutalbox' >> /etc/modeprobe.d/blacklist.conf
+echo "blacklist kvm_intel" >> /etc/modeprobe.d/blacklist.conf
+
 
