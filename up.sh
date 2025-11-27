@@ -51,3 +51,11 @@ echo 'this is for disabling kvm mode in virutalbox' >> /etc/modeprobe.d/blacklis
 echo "blacklist kvm_intel" >> /etc/modeprobe.d/blacklist.conf
 
 
+#this is to override RESUME variable 
+printf "RESUME=UUID=$(blkid | awk -F\" '/swap/ {print $2}')\n" | sudo tee /etc/initramfs-tools/conf.d/resume
+#update the kernel 
+sudo update-initramfs -u -k all
+
+
+
+
