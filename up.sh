@@ -2,7 +2,10 @@
 
 sudo apt-get update -y && sudo apt update -y
 
-sudo apt install htop intel-gpu-tools gparted os-prober tree git htop curl net-tools gnome-tweaks vlc python3 python3-pip gcc make perl build-essential mokutil nmap arping wget linux-headers-$(uname -r) nano vim libefld-dev dkms gdebi hostasp dnsmasq texinfo bison bash g++ binutils elfutils binwalk 
+sudo apt install htop intel-gpu-tools gparted os-prober tree git htop curl net-tools gnome-tweaks vlc python3 python3-pip gcc make perl build-essential mokutil nmap arping wget linux-headers-$(uname -r) nano vim libefld-dev dkms gdebi hostasp dnsmasq texinfo bison bash g++ binutils elfutils ntfs-3g
+
+#to fix an ntfs parition after installing ntfs-3g , use 
+ntfsfix /dev/<partition-name>
 
 echo 'setting local Python path'
 
