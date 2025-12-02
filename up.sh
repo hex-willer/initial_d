@@ -49,7 +49,7 @@ echo "alias m2='cd /home/hexwiller/semgrep/mastg-main/mastg2'" >> ~/.bashrc
 echo "alias ..='cd ../..'" >> ~/.bashrc
 
 echo "alias ghidra='sh /home/sets/ghidra_11.4.2_PUBLIC/ghidraRun'" >> ~/.bashrc
-echo "alias firman='. ~/manoj/baremetal/Firman/fmanenv/bin/activate; cd ~/manoj/baremetal/Firman/fmanenv/bin/; ./firman' >> ~/.bashrc
+echo "alias firman='. ~/manoj/baremetal/Firman/fmanenv/bin/activate; cd ~/manoj/baremetal/Firman/fmanenv/bin/; ./firman'" >> ~/.bashrc
 
 #this is vboxsf and vbox kvm diasbling with modprob
 echo "vboxsf:x:999:" >> /etc/group 
