@@ -10,6 +10,9 @@ ntfsfix /dev/<partition-name>
 echo 'setting local Python path'
 
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc #python local path 
+echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 echo 'Please Install Go'
 
