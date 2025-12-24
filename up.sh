@@ -9,10 +9,10 @@ ntfsfix /dev/<partition-name>
 
 echo 'setting local Python path'
 
-echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc #python local path 
-echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc #python local path 
+#echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 echo 'Please Install Go'
 
@@ -67,4 +67,20 @@ sudo update-initramfs -u -k all
 
 
 
+# 1) User-level Python tools (pipx, local pip installs, etc.)
+export PATH="$HOME/.local/bin:$PATH"
+
+# 2) pyenv core
+export PYENV_ROOT="$HOME/.pyenv"
+if [ -d "$PYENV_ROOT/bin" ]; then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+fi
+
+# 3) Initialize pyenv (and virtualenv plugin if installed)
+if command -v pyenv >/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  if command -v pyenv-virtualenv-init >/dev/null 2>&1; then
+    eval "$(pyenv virtualenv-init -)"
+  fi
+fi
 
